@@ -40,6 +40,15 @@ public class Main {
             System.out.println("s1 and s3 has the same values");
         }
 
+        OOP oop = new OOP();
+        //Nếu không có instanceof (dòng 83, class Student), khi truyền đối tượng OOP vào equals ở đây
+        //chương trình vẫn sẽ dịch được (compile)
+        //tuy nhiên khi chạy sẽ lỗi, do không thể ép kiểu OOP về kiểu Student
+        if(s1.equals(oop)){
+            System.out.println("s1 and oop has the same values");
+        }
+
+
         //x và y là các biến địa phương (local variables)
         //biến địa phương phải được khởi tạo trước khi sử dụng
         //kiểu dữ liệu của x và y là kiểu int, đây là kiểu nguyên thuỷ (primitive), không phải kiểu đối tượng
